@@ -1,4 +1,6 @@
 import java.io.File;
+import javax.swing.*;
+
 
 public class gallery{
     public static void main(String[] args){
@@ -16,9 +18,22 @@ public class gallery{
                 }
             }
         }
-
+        gui maingui = new gui();
+        maingui.show();
 
 
     }
 
+}
+class gui {
+    public void show() {
+        JFrame frame = new JFrame("Image displayer");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 300);
+
+        JButton button = new JButton("Press");
+        frame.add(button);
+
+        frame.setVisible(true);
+    }
 }
